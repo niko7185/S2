@@ -19,7 +19,7 @@ namespace S2.Oop2
 
                 if(string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentNullException(nameof(mail), "Mail cannot be empty");
+                    throw new ArgumentNullException(nameof(mail), "Mail cannot be empty.");
                 }
 
                 mail = value;
@@ -36,7 +36,7 @@ namespace S2.Oop2
 
                 if(string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentNullException(nameof(phone), "Phone number cannot be empty");
+                    throw new ArgumentNullException(nameof(phone), "Phone number cannot be empty.");
                 }
 
                 phone = value;
