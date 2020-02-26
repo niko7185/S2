@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace S2.Oop2
@@ -17,10 +18,10 @@ namespace S2.Oop2
             set
             {
 
-                if(string.IsNullOrWhiteSpace(value))
-                {
-                    throw new ArgumentNullException(nameof(mail), "Mail cannot be empty.");
-                }
+                (bool notValid, string errorMessage) validation = ValidateMail(value);
+
+                if(validation.notValid)
+                    throw new ArgumentException(validation.errorMessage);
 
                 mail = value;
 
@@ -34,10 +35,10 @@ namespace S2.Oop2
             set
             {
 
-                if(string.IsNullOrWhiteSpace(value))
-                {
-                    throw new ArgumentNullException(nameof(phone), "Phone number cannot be empty.");
-                }
+                (bool notValid, string errorMessage) validation = ValidatePhone(value);
+
+                if(validation.notValid)
+                    throw new ArgumentException(validation.errorMessage);
 
                 phone = value;
             }
@@ -52,6 +53,31 @@ namespace S2.Oop2
 
         }
 
+        public static (bool, string) ValidateMail(string mail)
+        {
+
+            if(string.IsNullOrWhiteSpace(mail))
+                return (true, "Mail cannot be empty.");
+
+            if(!mail.Contains("@") || !mail.Contains("."))
+                return (true, "Mail must contain a domain.");
+
+            return (false, string.Empty);
+
+        }
+
+        public static (bool, string) ValidatePhone(string phone)
+        {
+
+            if(string.IsNullOrWhiteSpace(phone))
+                return (true, "Phone number cannot be empty.");
+
+            if(!phone.Any(c => char.IsDigit(c)))
+                return (true, "Phone number must contain at least 1 number.");
+
+            return (false, string.Empty);
+
+        }
 
     }
 }
