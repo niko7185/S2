@@ -53,7 +53,8 @@ namespace S2.Oop2
                 if(value == null)
                     throw new ArgumentNullException(nameof(contanctInfo), "A person must have contact information");
 
-                contanctInfo = value;
+                if(contanctInfo != value)
+                    contanctInfo = value;
 
             }
         }
@@ -76,7 +77,7 @@ namespace S2.Oop2
 
             BirthDate = birthDate;
 
-            ContanctInfo = new ContanctInformation("-----@mail.mail", "000000000");
+            ContanctInfo = new ContanctInformation();
 
         }
 

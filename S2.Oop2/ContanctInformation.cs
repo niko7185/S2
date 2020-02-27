@@ -53,6 +53,14 @@ namespace S2.Oop2
 
         }
 
+        public ContanctInformation()
+        {
+
+            Mail = "-----@mail.mail";
+
+            Phone = "00000000000";
+        }
+
         public static (bool, string) ValidateMail(string mail)
         {
 
