@@ -50,7 +50,11 @@ namespace S2.Oop2
             set
             {
 
+                if(value == null)
+                    throw new ArgumentNullException(nameof(contanctInfo), "A person must have contact information");
+
                 contanctInfo = value;
+
             }
         }
 
@@ -62,6 +66,17 @@ namespace S2.Oop2
             BirthDate = birthDate;
 
             ContanctInfo = contactInfo;
+
+        }
+
+        public Person(string name, DateTime birthDate)
+        {
+
+            Name = name;
+
+            BirthDate = birthDate;
+
+            ContanctInfo = new ContanctInformation("-----@mail.mail", "000000000");
 
         }
 
