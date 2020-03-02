@@ -4,14 +4,14 @@ using System.Text;
 
 namespace S2.OopInheritance.OopLearning.BL
 {
-    class CustomFileInfo
+    public abstract class CustomFileInfo
     {
 
-        private string fileName;
-        private int fileSize;
-        private DateTime creationTime;
+        protected string fileName;
+        protected int fileSize;
+        protected DateTime creationTime;
 
-        protected string FileName
+        public string FileName
         {
             get => fileName;
 
@@ -25,21 +25,21 @@ namespace S2.OopInheritance.OopLearning.BL
             }
         }
 
-        protected int FileSize
+        public int FileSize
         {
             get => fileSize;
 
             set
             {
 
-                if(value > 0)
+                if(value <= 0)
                     throw new ArgumentOutOfRangeException(nameof(FileSize), "File size must be higher than 0");
 
                 fileSize = value;
             }
         }
 
-        protected DateTime CreationTime
+        public DateTime CreationTime
         {
             get => creationTime;
 
@@ -61,6 +61,17 @@ namespace S2.OopInheritance.OopLearning.BL
             FileSize = fileSize;
 
             CreationTime = creationTime;
+
+        }
+
+        /// <summary>
+        /// Checks whether or not the size of the file is above 45 MB
+        /// </summary>
+        /// <returns></returns>
+        public virtual bool IsSizeTooLarge()
+        {
+
+            return FileSize > 45 ? true : false;
 
         }
 

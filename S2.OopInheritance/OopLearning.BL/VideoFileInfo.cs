@@ -4,7 +4,12 @@ using System.Text;
 
 namespace S2.OopInheritance.OopLearning.BL
 {
-    class VideoFileInfo : ImageFileInfo
+
+    /// <summary>
+    /// Initializes a new instans of the <see cref="VideoFileInfo"/> class with all the information about the file.
+    /// Is inherited from <seealso cref="ImageFileInfo"/>
+    /// </summary>
+    public class VideoFileInfo : ImageFileInfo
     {
 
         private int duration;
@@ -19,7 +24,7 @@ namespace S2.OopInheritance.OopLearning.BL
             set
             {
 
-                if(value > 0)
+                if(value <= 0)
                     throw new ArgumentOutOfRangeException(nameof(Duration), "Duration must be greater than 0");
 
                 duration = value;
