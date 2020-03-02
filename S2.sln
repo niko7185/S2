@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S2.Oop2", "S2.Oop2\S2.Oop2.csproj", "{8101F8BD-F660-465A-9884-35C88B4F270F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S2.UnitTesting", "S2.UnitTesting\S2.UnitTesting.csproj", "{6913E2AE-B678-43E3-BCA3-B4E9A6CEF9C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S2.UnitTesting", "S2.UnitTesting\S2.UnitTesting.csproj", "{6913E2AE-B678-43E3-BCA3-B4E9A6CEF9C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S2.OopInheritance", "S2.OopInheritance\S2.OopInheritance.csproj", "{5A427051-E3B5-417A-8627-362D885DA9BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6913E2AE-B678-43E3-BCA3-B4E9A6CEF9C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6913E2AE-B678-43E3-BCA3-B4E9A6CEF9C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6913E2AE-B678-43E3-BCA3-B4E9A6CEF9C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A427051-E3B5-417A-8627-362D885DA9BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A427051-E3B5-417A-8627-362D885DA9BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A427051-E3B5-417A-8627-362D885DA9BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A427051-E3B5-417A-8627-362D885DA9BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
