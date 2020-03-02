@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S2.Oop2", "S2.Oop2\S2.Oop2.csproj", "{8101F8BD-F660-465A-9884-35C88B4F270F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S2.Oop2", "S2.Oop2\S2.Oop2.csproj", "{8101F8BD-F660-465A-9884-35C88B4F270F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S2.UnitTesting", "S2.UnitTesting\S2.UnitTesting.csproj", "{6913E2AE-B678-43E3-BCA3-B4E9A6CEF9C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8101F8BD-F660-465A-9884-35C88B4F270F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8101F8BD-F660-465A-9884-35C88B4F270F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8101F8BD-F660-465A-9884-35C88B4F270F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6913E2AE-B678-43E3-BCA3-B4E9A6CEF9C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6913E2AE-B678-43E3-BCA3-B4E9A6CEF9C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6913E2AE-B678-43E3-BCA3-B4E9A6CEF9C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6913E2AE-B678-43E3-BCA3-B4E9A6CEF9C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

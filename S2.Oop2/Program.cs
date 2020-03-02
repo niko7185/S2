@@ -144,7 +144,7 @@ namespace S2.Oop2
 
                             for(int personI = 0; personI < addresses[i].People.Count; personI++)
                             {
-                                Console.WriteLine($"Navn: {addresses[i].People[personI].Name}, Fødselsdag: {addresses[i].People[personI].BirthDate}, Mail: {addresses[i].People[personI].ContanctInfo.Mail}, Telefon nummer: {addresses[i].People[personI].ContanctInfo.Phone}");
+                                Console.WriteLine($"Navn: {addresses[i].People[personI].Name}, Fødselsdag: {addresses[i].People[personI].BirthDate}, Alder: {addresses[i].People[personI].Age}, Mail: {addresses[i].People[personI].ContanctInfo.Mail}, Telefon nummer: {addresses[i].People[personI].ContanctInfo.Phone}");
                             }
                         }
                         Console.WriteLine("");

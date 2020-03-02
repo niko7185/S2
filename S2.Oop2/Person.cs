@@ -8,6 +8,7 @@ namespace S2.Oop2
     {
 
         private string name;
+        private int age;
         private DateTime birthDate;
         private ContanctInformation contanctInfo;
 
@@ -26,6 +27,8 @@ namespace S2.Oop2
                 name = value;
             }
         }
+
+        public int Age => age;
 
         public DateTime BirthDate
         {
@@ -68,6 +71,8 @@ namespace S2.Oop2
 
             ContanctInfo = contactInfo;
 
+            CalculateAge();
+
         }
 
         public Person(string name, DateTime birthDate)
@@ -78,6 +83,23 @@ namespace S2.Oop2
             BirthDate = birthDate;
 
             ContanctInfo = new ContanctInformation();
+
+            CalculateAge();
+
+        }
+
+        public void CalculateAge()
+        {
+
+            DateTime now = DateTime.Now;
+
+            now.AddDays(-BirthDate.Day);
+
+            now.AddMonths(-BirthDate.Month);
+
+            now.AddYears(-BirthDate.Year);
+
+            age = now.Year;
 
         }
 
@@ -97,8 +119,8 @@ namespace S2.Oop2
         public static (bool, string) ValidateBirthDate(DateTime birthDate)
         {
 
-            if(birthDate > DateTime.Now)
-                return (true, "Birthday cannot be in the future.");
+            if(birthDate > DateTime.Now.AddDays(-1))
+                return (true, "Birthdate cannot be in the future or today.");
 
             if(birthDate < DateTime.Now.AddYears(-100))
                 return (true, "Birthday cannot be more than 100 years ago.");
