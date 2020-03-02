@@ -52,7 +52,7 @@ namespace ShapeEntities
 
         public override string ToString()
         {
-            return base.ToString();
+            return $"Position: ({X},{Y}).\n";
         }
     }
 }
