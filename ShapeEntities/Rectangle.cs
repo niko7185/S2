@@ -16,6 +16,10 @@ namespace ShapeEntities
 
             set
             {
+
+                if(value <= 0)
+                    throw new ArgumentOutOfRangeException(nameof(Length), "Length must be more than 0");
+
                 length = value;
             }
         }
@@ -26,6 +30,9 @@ namespace ShapeEntities
 
             set
             {
+                if(value <= 0)
+                    throw new ArgumentOutOfRangeException(nameof(Width), "Width must be more than 0");
+
                 width = value;
             }
         }

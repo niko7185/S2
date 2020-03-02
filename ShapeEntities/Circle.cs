@@ -15,6 +15,10 @@ namespace ShapeEntities
 
             set
             {
+
+                if(value <= 0)
+                    throw new ArgumentOutOfRangeException(nameof(Radius), "Radius must be more than 0");
+
                 radius = value;
             }
         }
