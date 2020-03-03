@@ -7,7 +7,7 @@ namespace S2.OopInheritance.OopLearning.BL
     public class Employee : Person
     {
 
-        private string initials;
+        protected string initials;
 
 
         public string Initials

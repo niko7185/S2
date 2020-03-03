@@ -21,7 +21,7 @@ namespace ShapeEntities
 
             double cir = CalculateCircumference();
 
-            return $"Position: ({X},{Y}), Length: {Length}.\nArea: {area}, Circumference: {cir}.\n";
+            return $"{base.ToString()}, Length: {Length}.\nArea: {area}, Circumference: {cir}.\n";
         }
 
     }

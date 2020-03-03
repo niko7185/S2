@@ -8,7 +8,7 @@ namespace ShapeEntities
     {
 
         //Erklær field
-        private double radius;
+        protected double radius;
 
         //Erklær property
         public double Radius
@@ -53,7 +53,7 @@ namespace ShapeEntities
 
             double cir = CalculateCircumference();
 
-            return $"Position: ({X},{Y}), Radius: {radius}.\nArea: {area}, Circumference: {cir}.\n";
+            return $"{base.ToString()}, Radius: {radius}.\nArea: {area}, Circumference: {cir}.\n";
         }
 
     }

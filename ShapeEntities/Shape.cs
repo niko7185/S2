@@ -40,7 +40,7 @@ namespace ShapeEntities
         }
 
         //Erklær constructor
-        public Shape(int x, int y)
+        protected Shape(int x, int y)
         {
 
             X = x;
@@ -57,7 +57,7 @@ namespace ShapeEntities
         //Override ToString metoden til at returnere x og y
         public override string ToString()
         {
-            return $"Position: ({X},{Y}).\n";
+            return $"Position: ({X},{Y})";
         }
     }
 }

@@ -12,7 +12,7 @@ namespace S2.OopInheritance.OopLearning.BL
     public class VideoFileInfo : ImageFileInfo
     {
 
-        private int duration;
+        protected int duration;
 
         public int Duration
         {
@@ -38,7 +38,7 @@ namespace S2.OopInheritance.OopLearning.BL
 
         public override string ToString()
         {
-            return "Video: " + FileName;
+            return "Video: " + base.ToString();
         }
 
     }

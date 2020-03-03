@@ -7,7 +7,7 @@ namespace S2.OopInheritance.OopLearning.BL
     public class Student : Person
     {
 
-        private string unilogin;
+        protected string unilogin;
 
         public string Unilogin
         {

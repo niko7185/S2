@@ -8,8 +8,8 @@ namespace ShapeEntities
     {
 
         //Erklær fields
-        private double length;
-        private double width;
+        protected double length;
+        protected double width;
 
         //Erklær properties
         public double Length
@@ -71,7 +71,7 @@ namespace ShapeEntities
 
             double cir = CalculateCircumference();
 
-            return $"Position: ({X},{Y}), Length: {Length}, Width: {Width}.\nArea: {area}, Circumference: {cir}.\n";
+            return $"{base.ToString()}, Length: {Length}, Width: {Width}.\nArea: {area}, Circumference: {cir}.\n";
         }
 
     }
