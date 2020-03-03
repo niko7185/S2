@@ -7,8 +7,10 @@ namespace ShapeEntities
     public class Circle : Shape
     {
 
+        //Erklær field
         private double radius;
 
+        //Erklær property
         public double Radius
         {
             get => radius;
@@ -23,25 +25,27 @@ namespace ShapeEntities
             }
         }
 
+        //Erklær constructor
         public Circle(int x, int y, double radius) : base(x, y)
         {
             Radius = radius;
         }
 
-        public override double CalculateArea()
+        public override double CalculateArea()//Udregn areal af cirkel
         {
 
             return (radius * radius) * 3.14;
 
         }
 
-        public override double CalculateCircumference()
+        public override double CalculateCircumference()//Udregn omkreds af cirkel
         {
 
             return 3.14 * (radius * 2);
 
         }
 
+        //Override ToString metoden til at returnere alt information om denne cirkel
         public override string ToString()
         {
 

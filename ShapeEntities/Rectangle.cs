@@ -7,9 +7,11 @@ namespace ShapeEntities
     public class Rectangle : Shape
     {
 
+        //Erklær fields
         private double length;
         private double width;
 
+        //Erklær properties
         public double Length
         {
             get => length;
@@ -37,6 +39,7 @@ namespace ShapeEntities
             }
         }
 
+        //Erklær constructor
         public Rectangle(int x, int y, double length, double width) : base(x, y)
         {
 
@@ -46,20 +49,21 @@ namespace ShapeEntities
 
         }
 
-        public override double CalculateArea()
+        public override double CalculateArea()//Udregn areal af rektangel
         {
 
             return width * length; 
 
         }
 
-        public override double CalculateCircumference()
+        public override double CalculateCircumference()//Udregn omkreds af rektangel
         {
 
             return 2 * (width + length);
 
         }
 
+        //Override ToString metoden til at returnere alt information om denne rektangel
         public override string ToString()
         {
 

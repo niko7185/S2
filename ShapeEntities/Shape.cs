@@ -7,9 +7,11 @@ namespace ShapeEntities
     public abstract class Shape
     {
 
+        //Erklær fields
         protected int x;
         protected int y;
 
+        //Erklær properties
         public int X
         {
             get => x;
@@ -37,6 +39,7 @@ namespace ShapeEntities
             }
         }
 
+        //Erklær constructor
         public Shape(int x, int y)
         {
 
@@ -46,10 +49,12 @@ namespace ShapeEntities
 
         }
 
+        //Erklær absract metoder
         public abstract double CalculateArea();
 
         public abstract double CalculateCircumference();
 
+        //Override ToString metoden til at returnere x og y
         public override string ToString()
         {
             return $"Position: ({X},{Y}).\n";

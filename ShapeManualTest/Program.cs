@@ -9,14 +9,17 @@ namespace ShapeManualTest
         static void Main(string[] args)
         {
 
+            //Erklær variabler
             List<Shape> shapes = new List<Shape>();
             bool done = false;
 
+            //Gentag indtil brugeren vil afslutte
             while(!done)
             {
 
-                Console.WriteLine("\n1: Tilføj ny form\t2: Samlet areal for alle former\t3: Samlet omkreds for alle former\n4: Antal oprettede former\t5: Antal oprettede cirkler\t6: Antal oprettede rektangler\n7: Antal oprettede kvadrater");
+                Console.WriteLine("\n1: Tilføj ny form\t2: Samlet areal for alle former\t3: Samlet omkreds for alle former\n4: Antal oprettede former\t5: Antal oprettede cirkler\t6: Antal oprettede rektangler\n7: Antal oprettede kvadrater\t8: Afslut");
 
+                //Indlæs en tast og vælg valgmulighed ud fra den
                 char menu = Console.ReadKey(true).KeyChar;
                 double counter = 0;
 
@@ -29,6 +32,7 @@ namespace ShapeManualTest
 
                             Console.WriteLine("\n1: Cirkel\t2: Rektangel\t3: Kvadrat");
 
+                            //Indlæs en tast og vælg valgmulighed ud fra den
                             char chosenShape = Console.ReadKey(true).KeyChar;
 
                             switch(chosenShape)
@@ -41,6 +45,7 @@ namespace ShapeManualTest
 
                                         Console.Write("\nRadius: ");
 
+                                        //Indlæs indtastede informationer. Udsrkiv fejlbsked og start forfra hvis det indtastede information ikke er et tal
                                         string stringRadius = Console.ReadLine();
                                         bool isNum = Double.TryParse(stringRadius, out double radius);
 
@@ -73,6 +78,7 @@ namespace ShapeManualTest
                                             continue;
                                         }
 
+                                        //Erklær ny circel object, vis dens information og tilføj den til listen.
                                         try
                                         {
 
@@ -82,7 +88,7 @@ namespace ShapeManualTest
 
                                             shapes.Add(circle);
                                         }
-                                        catch(Exception ex)
+                                        catch(Exception ex)//Hvis de indtastede informationer ikke er gyldige så udskriv en fejlbesked og start forfra
                                         {
 
                                             Console.WriteLine("\n" + ex.Message);
@@ -100,6 +106,7 @@ namespace ShapeManualTest
 
                                         Console.Write("\nLængde: ");
 
+                                        //Indlæs indtastede informationer. Udsrkiv fejlbsked og start forfra hvis det indtastede information ikke er et tal
                                         string stringlength = Console.ReadLine();
                                         bool isNum = Double.TryParse(stringlength, out double length);
 
@@ -143,6 +150,7 @@ namespace ShapeManualTest
                                             continue;
                                         }
 
+                                        //Erklær ny circel rektangel, vis dens information og tilføj den til listen.
                                         try
                                         {
 
@@ -152,7 +160,7 @@ namespace ShapeManualTest
 
                                             shapes.Add(rectangle);
                                         }
-                                        catch(Exception ex)
+                                        catch(Exception ex)//Hvis de indtastede informationer ikke er gyldige så udskriv en fejlbesked og start forfra
                                         {
 
                                             Console.WriteLine("\n" + ex.Message);
@@ -170,6 +178,7 @@ namespace ShapeManualTest
 
                                         Console.Write("\nLængde: ");
 
+                                        //Indlæs indtastede informationer. Udsrkiv fejlbsked og start forfra hvis det indtastede information ikke er et tal
                                         string stringlength = Console.ReadLine();
                                         bool isNum = Double.TryParse(stringlength, out double length);
 
@@ -202,6 +211,7 @@ namespace ShapeManualTest
                                             continue;
                                         }
 
+                                        //Erklær ny kvadrat object, vis dens information og tilføj den til listen.
                                         try
                                         {
 
@@ -211,7 +221,7 @@ namespace ShapeManualTest
 
                                             shapes.Add(square);
                                         }
-                                        catch(Exception ex)
+                                        catch(Exception ex)//Hvis de indtastede informationer ikke er gyldige så udskriv en fejlbesked og start forfra
                                         {
 
                                             Console.WriteLine("\n" + ex.Message);
@@ -234,6 +244,7 @@ namespace ShapeManualTest
 
                     case '2':
 
+                        //Læs igennem listen med former og tæl deres areal sammen og udskriv det
                         for(int i = 0; i < shapes.Count; i++)
                         {
 
@@ -246,6 +257,7 @@ namespace ShapeManualTest
 
                     case '3':
 
+                        //Læs igennem listen med former og tæl deres omkreds sammen og udskriv det
                         for(int i = 0; i < shapes.Count; i++)
                         {
 
@@ -257,11 +269,13 @@ namespace ShapeManualTest
                         break;
                     case '4':
 
+                        //Udskriv antal af oprettede former
                         Console.WriteLine("\nAntal oprettede former: " + shapes.Count);
 
                         break;
                     case '5':
 
+                        //Læs igennem listen med former og tæl hvor mange cirkler der er og udskriv det
                         for(int i = 0; i < shapes.Count; i++)
                         {
 
@@ -274,6 +288,7 @@ namespace ShapeManualTest
                         break;
                     case '6':
 
+                        //Læs igennem listen med former og tæl hvor mange rektangler der er og udskriv det
                         for(int i = 0; i < shapes.Count; i++)
                         {
 
@@ -286,6 +301,7 @@ namespace ShapeManualTest
                         break;
                     case '7':
 
+                        //Læs igennem listen med former og tæl hvor mange kvadrater der er og udskriv det
                         for(int i = 0; i < shapes.Count; i++)
                         {
 
@@ -294,6 +310,10 @@ namespace ShapeManualTest
                         }
 
                         Console.WriteLine("\nAntal oprettede kvadrater: " + counter);
+
+                        break;
+                    case '8':
+                        done = true;
 
                         break;
                 }
