@@ -25,7 +25,7 @@ namespace ShapeEntities
 
         public Circle(int x, int y, double radius) : base(x, y)
         {
-
+            Radius = radius;
         }
 
         public override double CalculateArea()
